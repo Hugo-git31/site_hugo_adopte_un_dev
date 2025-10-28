@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil Entreprises - Adopteundev</title>
+  <link rel="stylesheet" href="style.css">
+  <script>window.JB_MODE='company';</script>
+</head>
+<body>
+
+<header>
+  <div class="entete-gauche">
+    <div class="burger" id="burgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <img src="assets/logoh.png" alt="Logo principal" class="logo-principal">
+  </div>
+
+  <div class="entete-milieu">
+    <a href="#" class="social-trigger"><img src="assets/logo1.png" alt="Logo 1" class="logo logo-1"></a>
+    <a href="#" class="social-trigger"><img src="assets/logo2.png" alt="Logo 2" class="logo logo-2"></a>
+    <img src="assets/logo3.png" alt="Logo 3" class="logo logo-3">
+    <img src="assets/logo4.png" id="loginBtn" alt="Logo 4" class="logo logo-4">
+    <a href="#" class="social-trigger"><img src="assets/logo9.png" alt="Logo 9" class="logo logo-9"></a>
+  </div>
+
+  <nav class="entete-droite">
+    <a href="about.html" class="desktop-only">Contact</a>
+    <div class="suivez-nous desktop-only">
+      <span>Suivez-nous sur :</span>
+      <div class="logos-reseaux">
+        <a href="#" class="social-trigger"><img src="assets/logo5.png" alt="Logo 5"></a>
+        <a href="#" class="social-trigger"><img src="assets/logo6.png" alt="Logo 6"></a>
+        <a href="#" class="social-trigger"><img src="assets/logo7.png" alt="Logo 7"></a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="menu-burger-content mobile-only" id="burgerMenu">
+  <span class="close-menu">&times;</span>
+  <a href="#">Candidats enregistrés</a>
+  <a href="#">Messages</a>
+  <a href="#">Notifications</a>
+  <a href="#">Profil</a>
+  <a href="#">Paramètres</a>
+</div>
+
+<main>
+  <div class="search-bar-container">
+    <input type="text" placeholder="Rechercher..." class="search-bar" id="main-search-bar" autocomplete="off">
+    <input type="text" placeholder="Localisation" class="location-bar" id="main-location-bar" autocomplete="off">
+    <button class="filter-button" id="main-filter-btn">Recherche</button>
+    <div id="search-suggestions"></div>
+    <div id="location-suggestions"></div>
+  </div>
+
+  <section class="offres" id="profilesSection"></section>
+  <div class="profiles-pagination" style="display:none; gap:12px; align-items:center; justify-content:center; margin:20px 0;"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="assets/logoh.png" alt="Logo principal" class="logo-principal">
+      <p>Réseaux sociaux :</p>
+      <div class="logos-reseaux">
+        <a href="#" class="social-trigger"><img src="assets/logo5.png" alt="Logo 5"></a>
+        <a href="#" class="social-trigger"><img src="assets/logo6.png" alt="Logo 6"></a>
+        <a href="#" class="social-trigger"><img src="assets/logo7.png" alt="Logo 7"></a>
+      </div>
+    </div>
+    <div class="footer-center">
+      <h3>Copyright</h3>
+      <p class="mentions">
+        <span>Mentions légales</span>
+        <span>CGU</span>
+        <span>Politique de confidentialité</span>
+        <span>Charte Entreprises</span>
+        <span>Politique cookies</span>
+      </p>
+    </div>
+    <div class="footer-right">
+      <h3>À propos</h3>
+      <ul>
+        <li><a href="about.html#concept">Concept</a></li>
+        <li><a href="about.html#entreprises">Entreprises</a></li>
+        <li><a href="about.html#partenaires">Partenaires</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2025 Adopteundev - Tous droits réservés</p>
+</footer>
+
+<div id="socialPopup" class="popup">
+  <div class="popup-content">
+    <a href="#" class="close-social">&times;</a>
+    <h2>Page en travaux</h2>
+    <p>Cette section est actuellement en cours de développement. Merci de votre patience !</p>
+  </div>
+</div>
+
+<script src="js/login.js"></script>
+<script src="js/accueil.js"></script>
+<script src="js/burger.js"></script>
+<script src="js/pageConstruction.js"></script>
+<script type="module" src="js/search_candidates.js"></script>
+
+</body>
+</html>

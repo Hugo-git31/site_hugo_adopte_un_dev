@@ -1,0 +1,22 @@
+[
+  {"title":"Frontend Dev","company":"Alice Martin","location":"Paris","company_banner":"https://picsum.photos/id/1011/400/200","tags":"js,react,ts,frontend"},
+  {"title":"Tech Lead","company":"Bob Durand","location":"Lyon","company_banner":"https://picsum.photos/id/1027/400/200","tags":"node,sql,docker,lead"},
+  {"title":"Intégrateur","company":"Charlie Bernard","location":"Marseille","company_banner":"https://picsum.photos/id/1005/400/200","tags":"html,css,alpine,integrateur"},
+  {"title":"Data Analyst","company":"Diana Petit","location":"Nantes","company_banner":"https://picsum.photos/id/1001/400/200","tags":"python,sql,powerbi,data"},
+  {"title":"Fullstack Jr","company":"Eric Roche","location":"Bordeaux","company_banner":"https://picsum.photos/id/1012/400/200","tags":"php,laravel,mysql,fullstack"},
+  {"title":"UX Designer","company":"Fiona Lemaire","location":"Toulouse","company_banner":"https://picsum.photos/id/1025/400/200","tags":"react,figma,protopie,ux"},
+  {"title":"Analyste SOC","company":"Georges Morel","location":"Lille","company_banner":"https://picsum.photos/id/237/400/200","tags":"siem,edr,threathunt,soc"},
+  {"title":"Data Scientist Jr","company":"Hannah Leclerc","location":"Rennes","company_banner":"https://picsum.photos/id/1014/400/200","tags":"python,scikit,pandas,ml"},
+  {"title":"DevOps","company":"Igor Dumont","location":"Strasbourg","company_banner":"https://picsum.photos/id/64/400/200","tags":"linux,ansible,k8s,devops"},
+  {"title":"Product Designer","company":"Julie Royer","location":"Nice","company_banner":"https://picsum.photos/id/433/400/200","tags":"ui,tailwind,design,product"},
+  {"title":"Backend Java","company":"Kevin Arnaud","location":"Grenoble","company_banner":"https://picsum.photos/id/823/400/200","tags":"java,spring,sql,backend"},
+  {"title":"Growth Marketer","company":"Léa Boucher","location":"Montpellier","company_banner":"https://picsum.photos/id/1021/400/200","tags":"seo,sea,ga4,growth"},
+  {"title":".NET Dev","company":"Marc Baron","location":"Tours","company_banner":"https://picsum.photos/id/1022/400/200","tags":".net,c#,azure,dev"},
+  {"title":"DataViz Engineer","company":"Nina Simon","location":"Dijon","company_banner":"https://picsum.photos/id/1023/400/200","tags":"tableau,d3js,dataviz,visualisation"},
+  {"title":"SRE / Sysadmin","company":"Olivier Ferry","location":"Reims","company_banner":"https://picsum.photos/id/1024/400/200","tags":"bash,nginx,postgres,sre"},
+  {"title":"QA Engineer","company":"Pauline Giraud","location":"Angers","company_banner":"https://picsum.photos/id/1020/400/200","tags":"cypress,playwright,qa,tests"},
+  {"title":"Go Backend","company":"Quentin Lambert","location":"Clermont-Fd","company_banner":"https://picsum.photos/id/1062/400/200","tags":"go,grpc,kafka,backend"},
+  {"title":"Frontend Vue","company":"Rachel Noël","location":"Metz","company_banner":"https://picsum.photos/id/1069/400/200","tags":"vue,pinia,frontend,js"},
+  {"title":"Pentester","company":"Samir Aït","location":"Rouen","company_banner":"https://picsum.photos/id/1074/400/200","tags":"pentest,burp,osint,security"},
+  {"title":"Product Manager","company":"Tess Henry","location":"Poitiers","company_banner":"https://picsum.photos/id/1084/400/200","tags":"roadmap,kpi,discovery,product"}
+]

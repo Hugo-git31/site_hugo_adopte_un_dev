@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mon Entreprise</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script>window.JB_MODE='company';</script>
+  <style>
+    /* micro-styles locaux pour la page */
+    .wrap { max-width: 1000px; margin: 24px auto; padding: 0 16px; }
+    .page-header {
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; margin-bottom:16px;
+    }
+    .page-title { margin:0; font-size:28px; color:#0A1F4F; }
+    .header-actions { display:flex; gap:8px; align-items:center; }
+    .btn { border:none; border-radius:10px; padding:10px 14px; cursor:pointer; }
+    .btn-primary { background:#3DA9FC; color:#fff; }
+    .btn-ghost { background:#f5f7fb; color:#0A1F4F; border:1px solid #e6e9f2; }
+    .grid {
+      display:grid; grid-template-columns: 2fr 1fr; gap:16px;
+    }
+    .card {
+      background:#fff; border:1px solid #e9eef6; border-radius:14px;
+      box-shadow:0 2px 20px rgba(0,0,0,.04);
+    }
+    .card .body { padding:16px; }
+    .stack { display:grid; gap:10px; }
+    .label { font-size:13px; color:#274060; margin-bottom:4px; }
+    .input, textarea.input {
+      width:100%; padding:10px 12px; border:1px solid #dde4ee;
+      border-radius:10px; font-size:14px; outline:none;
+    }
+    .input:focus, textarea.input:focus { border-color:#3DA9FC; box-shadow:0 0 0 3px rgba(61,169,252,.15) }
+    .banner {
+      border-radius:14px 14px 0 0; height:180px; width:100%;
+      object-fit:cover; display:none;
+    }
+    .banner-empty {
+      height:180px; border-radius:14px 14px 0 0; background:linear-gradient(135deg,#f2f7ff,#eef2f8);
+      display:flex; align-items:center; justify-content:center; color:#6b7a90; font-size:14px;
+    }
+    .row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .help { font-size:12px; color:#6b7a90; }
+    .divider { border-top:1px solid #eef2f8; margin:12px 0; }
+    .pill { padding:6px 10px; background:#eef6ff; color:#0A1F4F; border-radius:999px; font-size:12px; }
+    .muted-link { color:#0b6bff; text-decoration:underline; font-size:13px; }
+    header { padding:8px 12px; background:#000; color:#fff; display:flex; justify-content:space-between; align-items:center; }
+    header a { color:#8ab4ff; }
+    .right-actions { display:flex; align-items:center; gap:12px; }
+  </style>
+</head>
+<body>
+<header>
+  <img src="logoh.png" id="loginBtn" class="logo logo-4" alt="logo" />
+  <nav class="right-actions">
+    <a href="index_entreprises.html">Retour</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="page-header">
+    <h1 class="page-title">Mon Entreprise</h1>
+    <div class="header-actions">
+      <a class="muted-link" href="index.html?mode=candidate">Passer côté candidat</a>
+      <button id="btnSaveTop" class="btn btn-primary">Enregistrer</button>
+    </div>
+  </div>
+
+  <div id="guard" class="help" style="margin:6px 0 14px;"></div>
+
+  <div class="grid">
+    <!-- Colonne gauche : carte entreprise -->
+    <section class="card" id="companyCard">
+      <img id="bannerPreview" class="banner" alt="Bannière entreprise" />
+      <div id="bannerEmpty" class="banner-empty">Aucune bannière pour l’instant</div>
+
+      <div class="body stack">
+        <div class="row">
+          <div>
+            <div class="label">Nom *</div>
+            <input id="co_name" class="input" placeholder="Ma Société" />
+          </div>
+          <div>
+            <div class="label">Ville (siège)</div>
+            <input id="co_city" class="input" placeholder="Toulouse" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <div class="label">Secteur</div>
+            <input id="co_sector" class="input" placeholder="Logiciels, Conseil…" />
+          </div>
+          <div>
+            <div class="label">Effectif</div>
+            <input id="co_headcount" class="input" type="number" min="1" placeholder="ex : 42" />
+          </div>
+        </div>
+
+        <div>
+          <div class="label">Description</div>
+          <textarea id="co_desc" class="input" rows="4" placeholder="Ce que fait l’entreprise"></textarea>
+        </div>
+
+        <div>
+          <div class="label">Site web</div>
+          <input id="co_web" class="input" placeholder="https://..." />
+          <div class="help">Ajoute l’URL publique de ta société.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row" style="align-items:end;">
+          <div>
+            <div class="label">Bannière (URL)</div>
+            <input id="co_banner" class="input" placeholder="/uploads/xxx.webp" />
+            <div class="help">L’URL s’auto-remplit après upload.</div>
+          </div>
+          <div>
+            <div class="label">Uploader une image</div>
+            <div style="display:flex; gap:8px;">
+              <input type="file" id="file" accept="image/*" />
+              <button id="btnUpload" class="btn btn-ghost">Uploader</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:6px;">
+          <button id="btnSave" class="btn btn-primary">Enregistrer</button>
+        </div>
+
+        <div id="msg" class="help"></div>
+      </div>
+    </section>
+
+    <!-- Colonne droite : méta & raccourcis -->
+    <aside class="card">
+      <div class="body stack">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div class="label" style="margin:0;">Statut</div>
+          <span id="statusPill" class="pill">Non connecté</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="stack">
+          <div class="label">Raccourcis</div>
+          <button id="goJobs" class="btn btn-ghost">Publier une offre</button>
+          <button id="goList" class="btn btn-ghost">Voir mes offres</button>
+          <button id="goProfile" class="btn btn-ghost">Voir la page publique</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="help">
+          Astuce : complète d’abord <b>Nom</b> puis clique <b>Enregistrer</b> pour créer
+          l’entreprise ; tu pourras ensuite revenir compléter le reste.
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<script src="js/login.js"></script>
+<script type="module" src="js/company_profile.js"></script>
+</body>
+</html>
